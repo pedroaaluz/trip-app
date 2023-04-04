@@ -6,11 +6,19 @@
  */
 
 import React from 'react';
-
-import {ToDoList} from './src/screens/toDoList';
+import {QueryClientProvider, QueryClient} from 'react-query';
+import {Routes} from './src/route';
+import {NativeBaseProvider} from 'native-base';
+const reactQueryClient = new QueryClient();
 
 function App(): JSX.Element {
-  return <ToDoList />;
+  return (
+    <QueryClientProvider client={reactQueryClient}>
+      <NativeBaseProvider>
+        <Routes />
+      </NativeBaseProvider>
+    </QueryClientProvider>
+  );
 }
 
 export default App;

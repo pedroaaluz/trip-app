@@ -1,0 +1,214 @@
+{
+  "locations": [
+    {
+      "name": "Basílica de Nazaré",
+      "tag": "Religioso",
+      "description": "Um dos principais pontos turísticos religiosos de Belém, a Basílica de Nazaré é conhecida como a casa da padroeira dos paraenses. Todos os anos, no segundo domingo de outubro, acontece o Círio de Nazaré, uma das maiores festas religiosas do mundo.",
+      "image": "https://basilicadenazare.com.br/wp-content/uploads/2022/07/20220517_153612-scaled.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "18:00",
+        "open": "06:00"
+      },
+      "address": "Tv. Dom Romualdo Coelho, S/N - Nazaré, Belém - PA, 66035-360",
+      "long": -48.4946867,
+      "lat": -1.4572195
+    },
+    {
+      "name": "Mercado Ver-o-Peso",
+      "tag": "Cultural",
+      "description": "O Mercado Ver-o-Peso é um dos maiores mercados a céu aberto da América latina. O local é muito conhecido por sua grande variedade de produtos, como ervas medicinais, artesanatos, frutas e peixes, além de ser um importante centro de cultura e história.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Ver-oPeso-Belem.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "17:00",
+        "open": "06:00"
+      },
+      "address": "Av. Boulevard Castilho França, s/n - Campina, Belém - PA, 66010-020",
+      "long": -48.5025249,
+      "lat": -1.4620695
+    },
+    {
+      "name": "Mangal das Garças",
+      "tag": "Natureza",
+      "description": "O Mangal das Garças é um parque ecológico localizado na região central de Belém. O local conta com diversas espécies de plantas e animais típicos da região amazônica, além de uma torre de observação com vista panorâmica da cidade.",
+      "image": "https://www.mangaldasgarcas.com.br/wp-content/uploads/2020/08/mangal_1024-1.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "18:00",
+        "open": "09:00"
+      },
+      "address": "Pass. Carneiro daCunha, s/n - Cidade Velha, Belém - PA, 66020-610",
+      "long": -48.5095049,
+      "lat": -1.4595244
+    },
+    {
+      "name": "Forte do Presépio",
+      "tag": "Histórico",
+      "description": "O Forte do Presépio é uma construção militar do século XVII, localizado na Cidade Velha de Belém. O local abriga um museu com acervo de objetos e documentos relacionados à história do estado do Pará e do Brasil.",
+      "image": "https://portodososlados.files.wordpress.com/2011/06/forte-do-presepio1.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "17:00",
+        "open": "09:00"
+      },
+      "address": "Forte do Presépio, S/N - Cidade Velha, Belém - PA, 66020-620",
+      "long": -48.5067853,
+      "lat": -1.4591429
+    },
+    {
+      "name": "Museu Paraense Emílio Goeldi",
+      "tag": "Natureza",
+      "description": "O Parque Zoobotânico do Museu Paraense Emílio Goeldi é um parque natural que abriga diversas espécies de plantas e animais ameaçados de extinção. O local é muito procurado por estudantes e pesquisadores que buscam conhecer a fauna e a flora da região amazônica.",
+      "image": "https://acervodigital.unesp.br/bitstream/unesp/337820/1/museu_goeldi.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "16:00",
+        "open": "09:00"
+      },
+      "address": "Av. Magalhães Barata, 376 - São Brás, Belém - PA, 66090-020",
+      "long": -48.4770502,
+      "lat": -1.4445746
+    },
+    {
+      "name": "Parque do Utinga",
+      "tag": "Natureza",
+      "description": "O Parque Estadual do Utinga é uma reserva de mata atlântica localizada em Belém. O parque conta com trilhas, cachoeiras, lagos e uma grande variedade de espécies animais e vegetais. É um lugar ideal para quem quer entrar em contato com a natureza.",
+      "image": "https://portalamazonia.com/images/p/34776/b2ap3_large_parque-do-utinga-jonas-santana-1024x573-1.png",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "17:00",
+        "open": "06:00"
+      },
+      "address": "Av. João Paulo II, s/n - Curió-Utinga, Belém - PA, 66645-000",
+      "long": -48.424626,
+      "lat": -1.4841521
+    },
+    {
+      "name": "Teatro da Paz",
+      "tag": "Cultural",
+      "description": "O Teatro da Paz é um dos mais importantes teatros do Brasil. Inaugurado em 1878, o teatro foi construído com mármore, cristais e madeiras nobres, e é um símbolo da riqueza e da cultura do período áureo da borracha na Amazônia. O local ainda realiza diversas apresentações e espetáculos ao longo do ano.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Theatro_da_Paz_01.JPG",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "09:00"
+      },
+      "address": "R. da Paz, s/n - Centro, Belém - PA, 66015-170",
+      "long": -48.4991505,
+      "lat": -1.4620721
+    },
+    {
+      "name": "Igreja de Santo Alexandre",
+      "tag": "Religioso",
+      "description": "A Igreja de Santo Alexandre é um importante monumento histórico de Belém. Construída no século XV III, a igreja é um exemplo da arquitetura barroca portuguesa e conta com um acervo de imagens sacras e objetos litúrgicos antigos. É um lugar ideal para quem gosta de história e arte sacra.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Belem-StoAlexandre1.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "18:00",
+        "open": "08:00"
+      },
+      "address": "Praça Frei Caetano Brandão, s/n - Cidade Velha, Belém - PA, 66020-190",
+      "long": -48.5056165,
+      "lat": -1.4553616
+    },
+    {
+      "name": "Lá em Casa",
+      "tag": "Restaurante",
+      "description": "Restaurante de comida regional paraense, com destaque para pratos com peixes e frutos do mar. Possui ambiente agradável e decoração típica da região.",
+      "image": "http://3.bp.blogspot.com/-Kr-makh1Uvg/UajnBGfIleI/AAAAAAAAAOk/gaSqTamwXCE/s1600/esta%25C3%25A7%25C3%25A3o.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "11:30"
+      },
+      "address": "Av. Conselheiro Furtado, 1425 - Batista Campos, Belém - PA, 66063-060",
+      "long": -48.487392,
+      "lat": -1.455406
+    },
+    {
+      "name": "Remanso do Bosque",
+      "tag": "Restaurante",
+      "description": "Restaurante renomado de comida regional paraense, com opções de pratos à la carte e menu degustação. O ambiente é aconchegante e elegante, com uma bela área verde ao redor.",
+      "image": "data:image/jpeg;base64,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",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "23:00",
+        "open": "12:00"
+      },
+      "address": "R. Domingos Marreiros, 1398 - Umarizal, Belém - PA, 66055-200",
+      "long": -48.492548,
+      "lat": -1.446192
+    },
+    {
+      "name": "Point do Açaí",
+      "tag": "Restaurante",
+      "description": "Restaurante que oferece diversas opções de pratos com açaí, desde o tradicional açaí na tigela até o açaí com peixe frito. O ambiente é simples e descontraído, com mesas ao ar livre.",
+      "image": "https://imagesapt.apontador-assets.com/fit-in/640x480/fc271b59645c48129648a196cf00929b/point-do-acai.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "10:00"
+      },
+      "address": "Av. Alm. Barroso, 718 - Marco, Belém - PA, 66093-020"
+    },
+    {
+      "name": "Tacacá do Renato",
+      "tag": "Restaurante",
+      "description": "Restaurante que oferece o tradicional tacacá paraense, feito com tucupi, jambu e camarão seco. O ambiente é simples e aconchegante, com mesas ao ar livre.",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0b/46/d4/32/photo3jpg.jpg",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "21:00",
+        "open": "17:00"
+      },
+      "address": "Av. Almirante Wandenkolk, 1477 - Umarizal, Belém - PA, 66055-221",
+      "long": -48.485099,
+      "lat": -1.442834
+    },
+    {
+      "name": "Studio Garden",
+      "tag": "Restaurante",
+      "description": "Restaurante com uma proposta diferenciada, que une gastronomia, música e arte. Oferece um menu criativo e sofisticado, com opções para vegetarianos e veganos. O ambiente é acolhedor e decorado com obras de arte.",
+      "image": "https://lh3.googleusercontent.com/p/AF1QipP0cO-YWuv2XOaILNQv7KRKlKbPuh7Nj9YEMbEp=w768-h768-n-o-k-v1",
+      "favorite": false,
+      "operatingHours": {
+        "closed": "23:00",
+        "open": "12:00"
+      },
+      "address": "R. Pres. Pernambuco, 269 - Batista Campos, Belém - PA, 66015-200",
+      "long": -48.493738,
+      "lat": -1.456986
+    },
+    {
+      "name": "Radisson Hotel Belém",
+      "tag": "Hotel",
+      "description": "Hotel 5 estrelas com piscina, academia e restaurante, localizado no centro de Belém. Oferece quartos espaçosos e elegantes, equipados com ar-condicionado, TV de tela plana e frigobar.",
+      "image": "https://letsimage.s3.sa-east-1.amazonaws.com/editor/atlantica/pt/radisson-hotel-belem/1626116201044-quem-somos-01.jpg",
+      "favorite": false,
+      "address": "Av. Gov. José Malcher, 1091 - Nazaré, Belém - PA, 66055-260",
+      "long": -48.478422,
+      "lat": -1.456516
+    },
+    {
+      "name": "Golden Tulip Belém",
+      "tag": "Hotel",
+      "description": "Hotel 4 estrelas com piscina, sauna e academia, localizado próximo ao centro histórico de Belém. Oferece quartos confortáveis e modernos, equipados com ar-condicionado, TV de tela plana e frigobar.",
+      "image": "data:image/jpeg;base64,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",
+      "favorite": false,
+      "address": "Av. Presidente Vargas, 800 - Reduto, Belém - PA, 66053-000",
+      "long": -48.504013,
+      "lat": -1.458924
+    },
+    {
+      "name": "Hotel Grão Para",
+      "tag": "Hotel",
+      "description": "Hotel 3 estrelas localizado no centro de Belém, próximo a diversas atrações turísticas. Oferece quartos simples e confortáveis, equipados com ar-condicionado, TV de tela plana e frigobar.",
+      "image": "http://hotelgraopara.com.br/site/wp-content/uploads/2015/01/slide1.jpg",
+      "favorite": false,
+      "address": "Av. Presidente Vargas, 718 - Campina, Belém - PA, 66017-000",
+      "long": -48.501000,
+      "lat": -1.462890
+    }
+  ]
+}
