@@ -9,6 +9,7 @@ import {
   IconButton,
   Text,
   Modal,
+  Pressable,
 } from 'native-base';
 import {ListRenderItemInfo} from 'react-native';
 import type {StackParamsList} from '../../types/rootStackParamListType';
@@ -22,13 +23,15 @@ import Loading from '../../components/Loading/Loading';
 import type {LocationInterface} from '../../types/locationType';
 import {normalizeWord} from '../../utils/normalizeWord';
 
-const Menu = ({}: /*  navigation, */
+const Menu = ({
+  navigation,
+}: /*  navigation, */
 NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
   const [showModal, setShowModal] = useState(false);
   const [value, setValue] = useState('');
 
   //@ts-ignore meaningless error
-  const {data, isLoading} = useQuery('list-locations', locationApi.get);
+  const {data, isLoading} = useQuery('list-locations', locationApi.list);
 
   const locations = data as LocationInterface[];
 
@@ -43,33 +46,40 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
 
   const renderLocation = ({item}: ListRenderItemInfo<LocationInterface>) => {
     return (
-      <Box
-        borderTopRadius={10}
-        borderColor="#D9D9D9"
-        flex={1}
-        borderWidth={2}
-        marginBottom={5}>
-        <Image
+      <Pressable
+        onPress={() =>
+          navigation.navigate('Description', {
+            locationId: item.name,
+          })
+        }>
+        <Box
           borderTopRadius={10}
-          source={{uri: item.image}}
-          size={220}
-          w="100%"
-          alt={item.name}
-        />
-        <Box padding={6}>
-          <Box alignItems="center" marginTop={2} flexDirection={'row'}>
-            <Icon
-              marginRight={2}
-              as={FeatherIcon}
-              name={'map-pin'}
-              size={5}
-              color={'#2C69E0'}
-            />
-            <Heading>{item.name}</Heading>
+          borderColor="#D9D9D9"
+          flex={1}
+          borderWidth={2}
+          marginBottom={5}>
+          <Image
+            borderTopRadius={10}
+            source={{uri: item.image}}
+            size={220}
+            w="100%"
+            alt={item.name}
+          />
+          <Box padding={6}>
+            <Box alignItems="center" marginTop={2} flexDirection={'row'}>
+              <Icon
+                marginRight={2}
+                as={FeatherIcon}
+                name={'map-pin'}
+                size={5}
+                color={'#2C69E0'}
+              />
+              <Heading>{item.name}</Heading>
+            </Box>
+            <Text>{item.address}</Text>
           </Box>
-          <Text>{item.address}</Text>
         </Box>
-      </Box>
+      </Pressable>
     );
   };
 
@@ -134,7 +144,7 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
         justifyContent={'center'}>
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={locations.filter(({name}) =>
+          data={locations?.filter(({name}) =>
             normalizeWord(name).includes(normalizeWord(value)),
           )}
           renderItem={renderLocation}

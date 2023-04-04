@@ -2,14 +2,25 @@ import axios from 'axios';
 
 const url = 'http://192.168.100.40:3000/locations';
 
-const getRecipes = async (value?: string) => {
+const listLocations = async () => {
+  const {data} = await axios.get(url, {
+    headers: {
+      Accept: 'application/json',
+      'content-Type': 'application/json',
+    },
+  });
+
+  return data;
+};
+
+const getLocation = async (name?: string) => {
   const {data} = await axios.get(url, {
     headers: {
       Accept: 'application/json',
       'content-Type': 'application/json',
     },
     params: {
-      like: value,
+      name_like: name,
     },
   });
 
@@ -39,7 +50,8 @@ const updateRecipes = async (favorites: boolean, id: string) => {
 };
 
 export const locationApi = {
-  get: getRecipes,
+  list: listLocations,
+  get: getLocation,
   getFavorites: getRecipesFavorites,
   update: updateRecipes,
   delete: {},
