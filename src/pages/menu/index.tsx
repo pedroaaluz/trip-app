@@ -20,12 +20,18 @@ import {FlatList} from 'react-native';
 import TagFilter from '../../components/TagFilter';
 import Loading from '../../components/Loading/Loading';
 import type {LocationInterface} from '../../types/locationType';
+import {normalizeWord} from '../../utils/normalizeWord';
 
-const Catalog = ({}: /*  navigation, */
+const Menu = ({}: /*  navigation, */
 NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
   const [showModal, setShowModal] = useState(false);
+  const [value, setValue] = useState('');
 
+  //@ts-ignore meaningless error
   const {data, isLoading} = useQuery('list-locations', locationApi.get);
+
+  const locations = data as LocationInterface[];
+
   const tagsFilters = [
     {name: 'Religioso', icon: 'book'},
     {name: 'Cultural', icon: 'film'},
@@ -83,11 +89,15 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
 
           <Box padding={5}>
             <Input
+              value={value}
+              w="100%"
+              onChangeText={text => {
+                setValue(text);
+              }}
               color={'#6D6D6D'}
               focusOutlineColor={'#2C69E0'}
               backgroundColor={'#f6f6f6'}
               variant="outline"
-              w="100%"
               paddingX={5}
               rightElement={
                 <IconButton
@@ -124,7 +134,9 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
         justifyContent={'center'}>
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={data}
+          data={locations.filter(({name}) =>
+            normalizeWord(name).includes(normalizeWord(value)),
+          )}
           renderItem={renderLocation}
         />
       </Box>
@@ -133,4 +145,4 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
   );
 };
 
-export default Catalog;
+export default Menu;
