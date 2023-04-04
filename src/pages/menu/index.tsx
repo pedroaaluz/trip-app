@@ -1,14 +1,16 @@
-import React /* , {useState} */ from 'react';
+import React, {useState} from 'react';
 import {
   Box,
   HStack,
   Input,
   Icon,
-  Divider,
   Image,
   Heading,
+  IconButton,
   Text,
+  Modal,
 } from 'native-base';
+import {ListRenderItemInfo} from 'react-native';
 import type {StackParamsList} from '../../types/rootStackParamListType';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {locationApi} from '../../utils/locationApi';
@@ -16,9 +18,13 @@ import {useQuery} from 'react-query';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import {FlatList} from 'react-native';
 import TagFilter from '../../components/TagFilter';
+import Loading from '../../components/Loading/Loading';
+import type {LocationInterface} from '../../types/locationType';
 
 const Catalog = ({}: /*  navigation, */
 NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
+  const [showModal, setShowModal] = useState(false);
+
   const {data, isLoading} = useQuery('list-locations', locationApi.get);
   const tagsFilters = [
     {name: 'Religioso', icon: 'book'},
@@ -29,11 +35,7 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
     {name: 'Hotel', icon: 'briefcase'},
   ];
 
-  const renderFilters = ({item}) => {
-    return <TagFilter name={item.name} icon={item.icon} />;
-  };
-
-  const renderLocation = ({item}) => {
+  const renderLocation = ({item}: ListRenderItemInfo<LocationInterface>) => {
     return (
       <Box
         borderTopRadius={10}
@@ -67,35 +69,54 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
 
   return (
     <Box flex={1} flexDirection={'column'} backgroundColor={'#f6f6f6'}>
-      <HStack
-        flexDirection={'column'}
-        w="100%"
-        justifyContent={'center'}
-        safeArea>
-        <Heading padding={6} color="#2C69E0">
-          Para onde vamos hoje?
-        </Heading>
-        <Box padding={5}>
-          <Input
-            color={'#2C69E0'}
-            outlineColor={'#2C69E0'}
-            focusOutlineColor={'#2C69E0'}
-            backgroundColor={'#f6f6f6'}
-            variant="outline"
-            w="100%"
-            paddingX={5}
-            rightElement={
-              <Icon
-                marginRight={6}
-                as={FeatherIcon}
-                name={'search'}
-                size={5}
-                color={'#000'}
-              />
-            }
-          />
-        </Box>
-      </HStack>
+      {isLoading ? (
+        <Loading count={7} />
+      ) : (
+        <HStack
+          flexDirection={'column'}
+          w="100%"
+          justifyContent={'center'}
+          safeArea>
+          <Heading padding={6} color="#2C69E0">
+            Para onde vamos hoje?
+          </Heading>
+
+          <Box padding={5}>
+            <Input
+              color={'#6D6D6D'}
+              focusOutlineColor={'#2C69E0'}
+              backgroundColor={'#f6f6f6'}
+              variant="outline"
+              w="100%"
+              paddingX={5}
+              rightElement={
+                <IconButton
+                  onPress={() => setShowModal(true)}
+                  _icon={{
+                    name: 'filter',
+                    as: FeatherIcon,
+                    size: 5,
+                    color: '#6D6D6D',
+                  }}
+                  variant={'ghost'}
+                />
+              }
+            />
+          </Box>
+        </HStack>
+      )}
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <Modal.Content maxWidth="400" maxH="352">
+          <Modal.CloseButton />
+          <Modal.Header>Filtros</Modal.Header>
+          <Modal.Body>
+            {/* FlatList break virtual list,i need read more about it */}
+            {tagsFilters.map((tag, index) => (
+              <TagFilter name={tag.name} icon={tag.icon} key={index} />
+            ))}
+          </Modal.Body>
+        </Modal.Content>
+      </Modal>
       <Box
         flex={1}
         paddingX={5}
@@ -107,6 +128,7 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
           renderItem={renderLocation}
         />
       </Box>
+      )
     </Box>
   );
 };
