@@ -5,9 +5,16 @@ import Feather from 'react-native-vector-icons/Feather';
 interface TagFilterProps {
   name: string;
   icon: string;
+  onToggle: () => boolean;
+  isChecked: boolean;
 }
 
-const TagFilter = ({name, icon}: TagFilterProps): JSX.Element => {
+const TagFilter = ({
+  name,
+  icon,
+  isChecked,
+  onToggle,
+}: TagFilterProps): JSX.Element => {
   return (
     <Box
       marginX={2}
@@ -22,7 +29,7 @@ const TagFilter = ({name, icon}: TagFilterProps): JSX.Element => {
           {name}
         </Text>
       </Box>
-      <Switch size="md" />
+      <Switch onToggle={onToggle} isChecked={isChecked} size="md" />
     </Box>
   );
 };

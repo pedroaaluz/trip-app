@@ -15,7 +15,7 @@ import {ListRenderItemInfo} from 'react-native';
 import type {StackParamsList} from '../../types/rootStackParamListType';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {locationApi} from '../../utils/locationApi';
-import {useQuery} from 'react-query';
+import {useQuery, useQueryClient} from 'react-query';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import {FlatList} from 'react-native';
 import TagFilter from '../../components/TagFilter';
@@ -25,13 +25,17 @@ import {normalizeWord} from '../../utils/normalizeWord';
 
 const Menu = ({
   navigation,
-}: /*  navigation, */
-NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
+}: NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
   const [showModal, setShowModal] = useState(false);
   const [value, setValue] = useState('');
+  const [filters, setFilter] = useState<Record<string, boolean>>({});
 
-  //@ts-ignore meaningless error
-  const {data, isLoading} = useQuery('list-locations', locationApi.list);
+  const queryClient = useQueryClient();
+
+  const {data, isLoading} = useQuery(['list-locations', filters], async () => {
+    const response = await locationApi.list(filters);
+    return response;
+  });
 
   const locations = data as LocationInterface[];
 
@@ -131,9 +135,23 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
           <Modal.Header>Filtros</Modal.Header>
           <Modal.Body>
             {/* FlatList break virtual list,i need read more about it */}
-            {tagsFilters.map((tag, index) => (
-              <TagFilter name={tag.name} icon={tag.icon} key={index} />
-            ))}
+            {tagsFilters.map((tag, index) => {
+              return (
+                <TagFilter
+                  onToggle={() => {
+                    setFilter({...filters, [tag.name]: !filters[tag.name]});
+
+                    queryClient.invalidateQueries('list-locations');
+
+                    return filters[tag.name];
+                  }}
+                  name={tag.name}
+                  icon={tag.icon}
+                  key={index}
+                  isChecked={filters[tag.name]}
+                />
+              );
+            })}
           </Modal.Body>
         </Modal.Content>
       </Modal>

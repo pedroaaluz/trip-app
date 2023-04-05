@@ -2,11 +2,24 @@ import axios from 'axios';
 
 const url = 'http://192.168.100.40:3000/locations';
 
-const listLocations = async () => {
+const listLocations = async (filters: Record<string, boolean>) => {
+  const filtersToUse = Object.keys(filters).reduce((acc, cr) => {
+    const key = cr;
+
+    if (filters[key]) {
+      acc.push(key);
+    }
+
+    return acc;
+  }, [] as string[]);
+
   const {data} = await axios.get(url, {
     headers: {
       Accept: 'application/json',
       'content-Type': 'application/json',
+    },
+    params: {
+      tag: filtersToUse,
     },
   });
 
