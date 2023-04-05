@@ -2,7 +2,10 @@ import axios from 'axios';
 
 const url = 'http://192.168.100.40:3000/locations';
 
-const listLocations = async (filters: Record<string, boolean>) => {
+const listLocations = async (
+  filters: Record<string, boolean>,
+  favorite: boolean = false,
+) => {
   const filtersToUse = Object.keys(filters).reduce((acc, cr) => {
     const key = cr;
 
@@ -20,6 +23,7 @@ const listLocations = async (filters: Record<string, boolean>) => {
     },
     params: {
       tag: filtersToUse,
+      favorite,
     },
   });
 
@@ -37,20 +41,6 @@ const getLocation = async (id?: string) => {
   return data;
 };
 
-const ListLocationsFavorites = async () => {
-  const {data} = await axios.get(url, {
-    headers: {
-      Accept: 'application/json',
-      'content-Type': 'application/json',
-    },
-    params: {
-      favorite: true,
-    },
-  });
-
-  return data;
-};
-
 const updateLocation = async (favorite: boolean, id: string) => {
   const {data} = await axios.patch(`${url}/${id}`, {
     favorite,
@@ -62,7 +52,6 @@ const updateLocation = async (favorite: boolean, id: string) => {
 export const locationApi = {
   list: listLocations,
   get: getLocation,
-  listFavorites: ListLocationsFavorites,
   update: updateLocation,
   delete: {},
   post: {},

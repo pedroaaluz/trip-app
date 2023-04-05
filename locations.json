@@ -168,7 +168,7 @@
       "tag": "Restaurante",
       "description": "Restaurante que oferece o tradicional tacacá paraense, feito com tucupi, jambu e camarão seco. O ambiente é simples e aconchegante, com mesas ao ar livre.",
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/0b/46/d4/32/photo3jpg.jpg",
-      "favorite": true,
+      "favorite": false,
       "operatingHours": {
         "closed": "21:00",
         "open": "17:00"
