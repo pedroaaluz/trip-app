@@ -168,7 +168,7 @@
       "tag": "Restaurante",
       "description": "Restaurante que oferece o tradicional tacacá paraense, feito com tucupi, jambu e camarão seco. O ambiente é simples e aconchegante, com mesas ao ar livre.",
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/0b/46/d4/32/photo3jpg.jpg",
-      "favorite": false,
+      "favorite": true,
       "operatingHours": {
         "closed": "21:00",
         "open": "17:00"
@@ -202,7 +202,11 @@
       "address": "Av. Gov. José Malcher, 1091 - Nazaré, Belém - PA, 66055-260",
       "long": -48.478422,
       "lat": -1.456516,
-      "id": "cf826ead-ecad-46d6-ae6e-16f7133bcb78"
+      "id": "cf826ead-ecad-46d6-ae6e-16f7133bcb78",
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "09:00"
+      }
     },
     {
       "name": "Golden Tulip Belém",
@@ -213,7 +217,11 @@
       "address": "Av. Presidente Vargas, 800 - Reduto, Belém - PA, 66053-000",
       "long": -48.504013,
       "lat": -1.458924,
-      "id": "9ad8f41e-fbee-4b1f-9f9d-80ca1317ea35"
+      "id": "9ad8f41e-fbee-4b1f-9f9d-80ca1317ea35",
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "09:00"
+      }
     },
     {
       "name": "Hotel Grão Para",
@@ -224,7 +232,11 @@
       "address": "Av. Presidente Vargas, 718 - Campina, Belém - PA, 66017-000",
       "long": -48.501,
       "lat": -1.46289,
-      "id": "b62a13ca-a3af-464c-b7bc-bb742b28e78b"
+      "id": "b62a13ca-a3af-464c-b7bc-bb742b28e78b",
+      "operatingHours": {
+        "closed": "22:00",
+        "open": "09:00"
+      }
     }
   ]
 }

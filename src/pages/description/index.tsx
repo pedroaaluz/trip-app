@@ -15,26 +15,28 @@ const Menu = ({
   route,
   navigation,
 }: NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
+  const {locationId} = route.params;
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  //@ts-ignore meaningless error
+  const {data, isLoading} = useQuery('get-location', async () => {
+    const response = await locationApi.get(locationId);
+    setIsFavorite(response.favorite);
+    return response;
+  });
+
   const queryClient = useQueryClient();
 
   const {mutate} = useMutation(
     () => locationApi.update(!isFavorite, locationId),
     {
-      onSuccess: () => queryClient.invalidateQueries('list-recipes-favorites'),
+      onSuccess: () => {
+        queryClient.invalidateQueries('list-locations');
+        queryClient.invalidateQueries('list-locations-favorites');
+      },
     },
   );
 
-  //@ts-ignore meaningless error
-  const {data, isLoading} = useQuery('get-location', async () => {
-    const response = await locationApi.get(locationId);
-
-    return response;
-  });
-
   const location = data as LocationInterface;
-
-  const {locationId} = route.params;
-  const [isFavorite, setIsFavorite] = useState<boolean>(location.favorite);
 
   const getIcon = {
     Religioso: 'book',
