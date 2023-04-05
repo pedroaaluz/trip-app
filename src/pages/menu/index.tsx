@@ -49,7 +49,7 @@ NativeStackScreenProps<StackParamsList, 'Description'>): JSX.Element => {
       <Pressable
         onPress={() =>
           navigation.navigate('Description', {
-            locationId: item.name,
+            locationId: item.id,
           })
         }>
         <Box

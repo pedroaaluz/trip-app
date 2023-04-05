@@ -5,7 +5,13 @@ interface OperatingHoursInterface {
 
 export interface LocationInterface {
   name: string;
-  tag: string;
+  tag:
+    | 'Religioso'
+    | 'Cultural'
+    | 'Natureza'
+    | 'Histórico'
+    | 'Restaurante'
+    | 'Hotel';
   description: string;
   image: string;
   favorite: boolean;
@@ -13,4 +19,5 @@ export interface LocationInterface {
   address: string;
   long: number;
   lat: number;
+  id: string;
 }

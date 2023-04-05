@@ -5,14 +5,15 @@
       "tag": "Religioso",
       "description": "Um dos principais pontos turísticos religiosos de Belém, a Basílica de Nazaré é conhecida como a casa da padroeira dos paraenses. Todos os anos, no segundo domingo de outubro, acontece o Círio de Nazaré, uma das maiores festas religiosas do mundo.",
       "image": "https://basilicadenazare.com.br/wp-content/uploads/2022/07/20220517_153612-scaled.jpg",
-      "favorite": false,
+      "favorite": true,
       "operatingHours": {
         "closed": "18:00",
         "open": "06:00"
       },
       "address": "Tv. Dom Romualdo Coelho, S/N - Nazaré, Belém - PA, 66035-360",
       "long": -48.4946867,
-      "lat": -1.4572195
+      "lat": -1.4572195,
+      "id": "58de1ec3-9e00-46e2-a6c9-ad00c85fc2a2"
     },
     {
       "name": "Mercado Ver-o-Peso",
@@ -26,7 +27,8 @@
       },
       "address": "Av. Boulevard Castilho França, s/n - Campina, Belém - PA, 66010-020",
       "long": -48.5025249,
-      "lat": -1.4620695
+      "lat": -1.4620695,
+      "id": "b7673a36-fdec-4f42-b686-78bada7f166b"
     },
     {
       "name": "Mangal das Garças",
@@ -40,7 +42,8 @@
       },
       "address": "Pass. Carneiro daCunha, s/n - Cidade Velha, Belém - PA, 66020-610",
       "long": -48.5095049,
-      "lat": -1.4595244
+      "lat": -1.4595244,
+      "id": "9fae5d81-72cb-4fb1-89e0-b0326322f311"
     },
     {
       "name": "Forte do Presépio",
@@ -54,7 +57,8 @@
       },
       "address": "Forte do Presépio, S/N - Cidade Velha, Belém - PA, 66020-620",
       "long": -48.5067853,
-      "lat": -1.4591429
+      "lat": -1.4591429,
+      "id": "f858f5cf-12f8-433f-9d0e-04d52b81b711"
     },
     {
       "name": "Museu Paraense Emílio Goeldi",
@@ -68,7 +72,8 @@
       },
       "address": "Av. Magalhães Barata, 376 - São Brás, Belém - PA, 66090-020",
       "long": -48.4770502,
-      "lat": -1.4445746
+      "lat": -1.4445746,
+      "id": "3dc307cb-f275-44ac-85f1-5c824c7b0b9d"
     },
     {
       "name": "Parque do Utinga",
@@ -82,7 +87,8 @@
       },
       "address": "Av. João Paulo II, s/n - Curió-Utinga, Belém - PA, 66645-000",
       "long": -48.424626,
-      "lat": -1.4841521
+      "lat": -1.4841521,
+      "id": "0903e53d-aff9-48c1-b7d2-7ff370052108"
     },
     {
       "name": "Teatro da Paz",
@@ -96,7 +102,8 @@
       },
       "address": "R. da Paz, s/n - Centro, Belém - PA, 66015-170",
       "long": -48.4991505,
-      "lat": -1.4620721
+      "lat": -1.4620721,
+      "id": "47300885-b345-4313-925f-64dd42b71ea3"
     },
     {
       "name": "Igreja de Santo Alexandre",
@@ -110,7 +117,8 @@
       },
       "address": "Praça Frei Caetano Brandão, s/n - Cidade Velha, Belém - PA, 66020-190",
       "long": -48.5056165,
-      "lat": -1.4553616
+      "lat": -1.4553616,
+      "id": "97b89cf3-694c-4ad6-88be-84dfb687a4ec"
     },
     {
       "name": "Lá em Casa",
@@ -124,7 +132,8 @@
       },
       "address": "Av. Conselheiro Furtado, 1425 - Batista Campos, Belém - PA, 66063-060",
       "long": -48.487392,
-      "lat": -1.455406
+      "lat": -1.455406,
+      "id": "caf748c2-134d-4a18-a7c0-dec3e4472eac"
     },
     {
       "name": "Remanso do Bosque",
@@ -138,7 +147,8 @@
       },
       "address": "R. Domingos Marreiros, 1398 - Umarizal, Belém - PA, 66055-200",
       "long": -48.492548,
-      "lat": -1.446192
+      "lat": -1.446192,
+      "id": "99c844c6-e4f8-40f2-8193-2e9a6ee31e2c"
     },
     {
       "name": "Point do Açaí",
@@ -150,7 +160,8 @@
         "closed": "22:00",
         "open": "10:00"
       },
-      "address": "Av. Alm. Barroso, 718 - Marco, Belém - PA, 66093-020"
+      "address": "Av. Alm. Barroso, 718 - Marco, Belém - PA, 66093-020",
+      "id": "43b36575-fb5d-445d-a88a-b797986a8f7f"
     },
     {
       "name": "Tacacá do Renato",
@@ -164,7 +175,8 @@
       },
       "address": "Av. Almirante Wandenkolk, 1477 - Umarizal, Belém - PA, 66055-221",
       "long": -48.485099,
-      "lat": -1.442834
+      "lat": -1.442834,
+      "id": "b6d02ee3-5605-49c5-a76d-4846a1cf2fe9"
     },
     {
       "name": "Studio Garden",
@@ -178,7 +190,8 @@
       },
       "address": "R. Pres. Pernambuco, 269 - Batista Campos, Belém - PA, 66015-200",
       "long": -48.493738,
-      "lat": -1.456986
+      "lat": -1.456986,
+      "id": "c0bf193d-ff4a-485b-9394-a2f841b36be1"
     },
     {
       "name": "Radisson Hotel Belém",
@@ -188,7 +201,8 @@
       "favorite": false,
       "address": "Av. Gov. José Malcher, 1091 - Nazaré, Belém - PA, 66055-260",
       "long": -48.478422,
-      "lat": -1.456516
+      "lat": -1.456516,
+      "id": "cf826ead-ecad-46d6-ae6e-16f7133bcb78"
     },
     {
       "name": "Golden Tulip Belém",
@@ -198,7 +212,8 @@
       "favorite": false,
       "address": "Av. Presidente Vargas, 800 - Reduto, Belém - PA, 66053-000",
       "long": -48.504013,
-      "lat": -1.458924
+      "lat": -1.458924,
+      "id": "9ad8f41e-fbee-4b1f-9f9d-80ca1317ea35"
     },
     {
       "name": "Hotel Grão Para",
@@ -207,8 +222,9 @@
       "image": "http://hotelgraopara.com.br/site/wp-content/uploads/2015/01/slide1.jpg",
       "favorite": false,
       "address": "Av. Presidente Vargas, 718 - Campina, Belém - PA, 66017-000",
-      "long": -48.501000,
-      "lat": -1.462890
+      "long": -48.501,
+      "lat": -1.46289,
+      "id": "b62a13ca-a3af-464c-b7bc-bb742b28e78b"
     }
   ]
 }

@@ -4,6 +4,8 @@ export type TabParamsList = {
 };
 
 export type StackParamsList = {
-  Description: any;
+  Description: {
+    locationId: string;
+  };
   Tabs: undefined;
 };

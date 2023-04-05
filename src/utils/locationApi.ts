@@ -13,14 +13,11 @@ const listLocations = async () => {
   return data;
 };
 
-const getLocation = async (name?: string) => {
-  const {data} = await axios.get(url, {
+const getLocation = async (id?: string) => {
+  const {data} = await axios.get(`${url}/${id}`, {
     headers: {
       Accept: 'application/json',
       'content-Type': 'application/json',
-    },
-    params: {
-      name_like: name,
     },
   });
 
@@ -41,9 +38,9 @@ const getRecipesFavorites = async () => {
   return data;
 };
 
-const updateRecipes = async (favorites: boolean, id: string) => {
+const updateLocation = async (favorite: boolean, id: string) => {
   const {data} = await axios.patch(`${url}/${id}`, {
-    favorites,
+    favorite,
   });
 
   return data;
@@ -53,7 +50,7 @@ export const locationApi = {
   list: listLocations,
   get: getLocation,
   getFavorites: getRecipesFavorites,
-  update: updateRecipes,
+  update: updateLocation,
   delete: {},
   post: {},
 };

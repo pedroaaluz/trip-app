@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 import Menu from './pages/menu';
+import Description from './pages/description';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -52,6 +53,7 @@ export const Routes = () => {
         initialRouteName="Tabs"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Tabs" component={TabsStack} />
+        <Stack.Screen name="Description" component={Description} />
       </Stack.Navigator>
     </NavigationContainer>
   );
