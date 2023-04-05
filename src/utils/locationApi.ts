@@ -24,14 +24,14 @@ const getLocation = async (id?: string) => {
   return data;
 };
 
-const getRecipesFavorites = async () => {
+const ListLocationsFavorites = async () => {
   const {data} = await axios.get(url, {
     headers: {
       Accept: 'application/json',
       'content-Type': 'application/json',
     },
     params: {
-      favorites: true,
+      favorite: true,
     },
   });
 
@@ -49,7 +49,7 @@ const updateLocation = async (favorite: boolean, id: string) => {
 export const locationApi = {
   list: listLocations,
   get: getLocation,
-  getFavorites: getRecipesFavorites,
+  listFavorites: ListLocationsFavorites,
   update: updateLocation,
   delete: {},
   post: {},

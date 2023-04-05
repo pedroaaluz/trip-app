@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 import Menu from './pages/menu';
+import Favorites from './pages/favorites';
 import Description from './pages/description';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -33,13 +34,16 @@ const TabsStack = () => {
 
           return <FeatherIcon name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#11999e',
+        tabBarActiveTintColor: '#2C69E0',
         tabBarInactiveTintColor: 'gray',
         headerShown: false,
+
         tabBarAllowFontScaling: true,
       })}>
       {/* @ts-ignore i need read more about it*/}
       <Tab.Screen name="Menu" component={Menu} />
+      {/* @ts-ignore i need read more about it*/}
+      <Tab.Screen name="Favorites" component={Favorites} />
     </Tab.Navigator>
   );
 };
